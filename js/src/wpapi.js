@@ -32,8 +32,8 @@ var wpapi_getList = function( url, sectionName ) {
   blogPosts.open( 'GET', url + 'posts?filter[posts_per_page]=' + blogPostCount, true );
 
   blogPosts.onload = function ( e ) {
-    if (blogPosts.readyState === 4) {
-      if (blogPosts.status === 200) {
+    if ( blogPosts.readyState === 4 ) {
+      if ( blogPosts.status === 200 ) {
         blogPosts = JSON.parse( blogPosts.response );
 
         for ( var i = 0; i < blogPosts.length; i++ ) {
@@ -47,12 +47,12 @@ var wpapi_getList = function( url, sectionName ) {
           wpapi_getCategories( post, sectionName );
         }
       } else {
-        console.error(blogPosts.statusText);
+        console.error( blogPosts.statusText );
       }
     }
   };
-  blogPosts.onerror = function (e) {
-    console.error(blogPosts.statusText);
+  blogPosts.onerror = function ( e ) {
+    console.error( blogPosts.statusText );
   };
   blogPosts.send();
 }

@@ -55,6 +55,7 @@ grunt.initConfig({
 				'js/src/open.js',
 				'js/src/list-generator.js',
 				'js/src/wpapi.js',
+				'js/src/codepenapi.js',
 				'js/src/section-switcher.js',
 				'js/src/main.js'
 			],

@@ -7,4 +7,4 @@ Updating my website a bit at a time.
 2. `grunt`
 
 ## Colophon
-Currently uses WP RestAPI V2 and planning on adding some CodePen API fanciness.
+Currently uses WP RestAPI V2 and unofficial CodePen v2 fanciness via Nate Wiley.
