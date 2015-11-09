@@ -22,8 +22,10 @@
 		background: #fff;
 	}
 	@media ( min-width: 450px ) {
+		margin: em( 40px ) em( 48px ) em( 112px );
+	}
+	@media ( min-width: 800px ) {
 		margin: em( 72px ) em( 88px ) em( 112px );
-		margin-top: em( 72px );
 	}
 }
 

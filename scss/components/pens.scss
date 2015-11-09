@@ -7,6 +7,10 @@
 		border: 0;
 		margin-bottom: em( 16px );
 	}
+	@media ( min-width: 800px ) {
+		max-width: 600px;
+		margin: 0 auto;
+	}
 	.list-item {
 		@media ( max-width: 449px ) {
 			padding: 0;
