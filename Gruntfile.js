@@ -2,6 +2,8 @@ module.exports = function( grunt ) {
 
 grunt.loadNpmTasks( "grunt-sass" );
 grunt.loadNpmTasks( "grunt-autoprefixer" );
+grunt.loadNpmTasks('grunt-contrib-concat');
+grunt.loadNpmTasks('grunt-contrib-uglify');
 grunt.loadNpmTasks( "grunt-contrib-watch" );
 
 grunt.initConfig({
@@ -37,10 +39,39 @@ grunt.initConfig({
 			src: "css/*.css"
 		}
 	},
+	uglify: {
+		my_target: {
+			files: {
+				'js/main.min.js': [ 'js/main.js' ]
+			}
+		}
+	},
+	concat: {
+		options: {
+			// separator: ';',
+		},
+		dist: {
+			src: [
+				'js/src/open.js',
+				'js/src/list-generator.js',
+				'js/src/wpapi.js',
+				'js/src/section-switcher.js',
+				'js/src/main.js'
+			],
+			dest: 'js/main.js',
+		},
+	},
 	watch: {
 		sass: {
 			files: [ "scss/**/*.scss" ],
 			tasks: [ "sass", "autoprefixer" ],
+			options: {
+				spawn: false
+			}
+		},
+		js: {
+			files: [ "js/**/*.js" ],
+			tasks: [ "concat", "uglify" ],
 			options: {
 				spawn: false
 			}

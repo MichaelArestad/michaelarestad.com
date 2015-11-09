@@ -1,9 +1,9 @@
 // ==========================================================================
-// Post Item
+// List Item
 // ==========================================================================
 
 
-.post-item {
+.list-item {
 	display: inline-block;
 	position: relative;
 	padding: 24px;
@@ -32,7 +32,7 @@
 	}
 }
 
-.post-item__link {
+.list-item__link {
 	display: block;
 	color: #4F5561;
 	color: #fff;
@@ -51,7 +51,7 @@
 	}
 }
 
-.post-item__categories {
+.list-item__categories {
 	margin: 0;
 	padding: 0;
 	list-style: none;
@@ -60,7 +60,7 @@
 	@include text-overflow;
 }
 
-.post-item__category {
+.list-item__category {
 	display: inline-block;
 	margin-right: em( 8px, 10px );
 	color: #8995A9;

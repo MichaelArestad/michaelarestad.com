@@ -1,5 +1,7 @@
 ## FILES
 .DS_Store
+js/main.js
+js/main.min.js
 
 ## FOLDERS
 node_modules/
