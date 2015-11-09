@@ -27,11 +27,14 @@ a {
 
 		@media ( min-width: 450px ) {
 			position: absolute;
-			top: rem( 16px );
-			left: rem( 16px );
+				top: rem( 16px );
+				left: rem( 16px );
 			bottom: auto;
 			right: auto;
 			animation: none;
 		}
+	}
+	.to-top.do-it {
+		z-index: 2;
 	}
 }
