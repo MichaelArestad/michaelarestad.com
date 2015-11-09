@@ -1,0 +1,173 @@
+// ==========================================================================
+// All the cool logo animations in one spot
+// ==========================================================================
+
+
+.logo {
+	display: block;
+	position: relative;
+	width: em( 56px, 56px );
+	height: em( 56px, 56px );
+	background: rgba( 30, 30, 30, .9 );
+	font-size: rem( 36px );
+
+	@media ( min-width: 800px ) {
+		font-size: rem( 56px );
+	}
+}
+
+.logo-wrapper {
+	position: absolute;
+	top: em( 16px, 56px );
+	left: em( 16px, 56px );
+	width: em( 24px, 56px );
+	height: em( 24px, 56px );
+}
+
+.logo-mark,
+.logo-bar {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.logo-mark {
+	width: em( 24px, 56px );
+	height: em( 18px, 56px );
+	z-index: 4;
+	transition: all .3s ease-in-out;
+}
+
+.logo-bar {
+	content: "";
+	width: em( 5px, 56px );
+	height: em( 24px, 56px );
+	background: #fff;
+	transition: all .3s ease-in-out;
+}
+
+.logo-bar--two {
+	right: 0;
+	left: auto;
+}
+
+.is-tags {
+	&:hover,
+	&:focus {
+		.logo-mark--one {
+			transform: rotate( 90deg ) translate( em( 3px, 56px ), em( 24px, 56px ) );
+		}
+		.logo-mark--two {
+			transform: rotate( -90deg ) translate( em( -3px, 56px ), em( 24px, 56px ) );
+		}
+		.logo-bar--one {
+			transform-origin: right bottom;
+			transform: rotate( 30deg ) translate( em( 3px, 56px ), em( -3px, 56px ) );
+		}
+		.logo-bar--two {
+			transform-origin: left top;
+			transform: rotate( 30deg ) translate( em( -3px, 56px ), em( 1px, 56px ) );
+		}
+	}
+}
+
+.is-nunchucks {
+	&:hover,
+	&:focus {
+		.logo-mark {
+			transform:  scaleY( -1 ) translateY( em( -1px, 56px ) );
+		}
+		.logo-bar {
+			height: em( 20px, 56px );
+			z-index: 5;
+		}
+		.logo-bar--one {
+			transform-origin: right center;
+			transform: rotate( -270deg ) translate( em( 4px, 56px ), em( -10px, 56px ) );
+		}
+		.logo-bar--two {
+			transform-origin: left center;
+			transform: rotate( 270deg ) translate( em( -4px, 56px ), em( -10px, 56px ) );
+		}
+	}
+}
+
+.is-smile {
+	&:hover,
+	&:focus {
+		.logo-mark--one {
+			transform: scaleY( -1 ) translate( em( -19px, 56px ), em( 2px, 56px ) );
+		}
+		.logo-mark--two {
+			transform: scaleY( -1 ) translate( em( 19px, 56px ), em( 2px, 56px ) );
+		}
+		.logo-bar--one {
+			transform-origin: right bottom;
+			transform: rotate( 90deg ) translate( em( 3px, 56px ), em( 5px, 56px ) );
+		}
+		.logo-bar--two {
+			transform-origin: left bottom;
+			transform: rotate( -90deg ) translate( em( -8px, 56px ), em( 5px, 56px ) );
+		}
+	}
+}
+
+.is-reverse-smile {
+	.logo-mark--one {
+		transform: scaleY( -1 ) translate( em( -19px, 56px ), em( 2px, 56px ) );
+	}
+	.logo-mark--two {
+		transform: scaleY( -1 ) translate( em( 19px, 56px ), em( 2px, 56px ) );
+	}
+	.logo-bar--one {
+		transform-origin: right bottom;
+		transform: rotate( 90deg ) translate( em( 3px, 56px ), em( 5px, 56px ) );
+	}
+	.logo-bar--two {
+		transform-origin: left bottom;
+		transform: rotate( -90deg ) translate( em( -8px, 56px ), em( 5px, 56px ) );
+	}
+	&:hover,
+	&:focus {
+		.logo-mark--one,
+		.logo-mark--two {
+			transform: scaleY( 1 ) translate( 0 );
+		}
+		.logo-bar--one,
+		.logo-bar--two {
+			transform: rotate( 0 ) translate( 0 );
+		}
+	}
+}
+
+
+.to-top {
+	display: none;
+	z-index: 99;
+	text-indent: -9999px;
+	width: rem( 36px );
+	height: rem( 36px );
+
+	@media ( min-width: 800px ) {
+		width: rem( 56px );
+		height: rem( 56px );
+	}
+}
+
+// TODO refactor
+.do-it + .logo {
+	.logo-mark {
+		transition-delay: .4s;
+		transform: scaleY( -1 ) translateY( em( -1px, 56px ) );
+	}
+	.logo-bar--one {
+		transition-delay: .4s;
+		transform-origin: right bottom;
+		transform: rotate(90deg) translateY( em( 5px, 56px ) );
+	}
+	.logo-bar--two {
+		transition-delay: .4s;
+		transform-origin: left bottom;
+		transform: rotate( -90deg ) translateY( em( 5px, 56px ) );
+	}
+}

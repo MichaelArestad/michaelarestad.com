@@ -1,0 +1,85 @@
+// ==========================================================================
+// Nav Secondary
+// ==========================================================================
+
+
+.nav-secondary {
+	float: right;
+	margin: 0;
+	padding: 0;
+	background: #fff;
+	list-style: none;
+
+	@media ( max-width: 499px ) {
+		margin-top: em( 16px );
+		margin-right: em( 16px );
+	}
+	@media ( min-width: 450px ) {
+		position: absolute;
+			bottom: em( 16px );
+			left: em( 12px );
+		max-width: 100%;
+	}
+	@media ( min-width: 800px ) {
+			left: em( 16px );
+	}
+	li {
+		@media ( max-width: 449px ) {
+			float: left;
+		}
+	}
+	a {
+		position: relative;
+		color: $grey;
+		display: block;
+		padding: rem( 7px ) rem( 10px );
+		font-size: rem( 12px );
+		text-transform: uppercase;
+		letter-spacing: rem( 3px );
+
+		@media ( min-width: 800px ) {
+			border-left: 4px solid $orange;
+
+			&:before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 100%;
+				width: rem( 8px );
+				height: 100%;
+			}
+			&:hover,
+			&:focus {
+				background: $orange;
+				color: #fff;
+			}
+		}
+	}
+}
+
+.nav-secondary__label {
+	@media ( max-width: 799px ) {
+		display: none;
+	}
+}
+
+.nav-secondary__icon {
+	fill: $grey;
+	width: rem( 24px );
+	height: rem( 24px );
+
+	@media ( min-width: 800px ) {
+		position: absolute;
+			top: rem( 4px );
+			left: 100%;
+		margin-left: rem( 8px );
+		z-index: -1;
+		transform: translateX( rem( -32px ) );
+		transition: transform .15s ease-in-out;
+
+		.nav-secondary a:hover &,
+		&:hover {
+			transform: translateX( 0 );
+		}
+	}
+}

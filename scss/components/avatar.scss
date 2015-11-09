@@ -1,0 +1,45 @@
+// ==========================================================================
+// Avatar
+// ==========================================================================
+
+.avatar {
+	display: none;
+	opacity: 0;
+	position: absolute;
+		bottom: em( 128px );
+		left: em( 16px );
+	background: $blue-dark;
+	padding: em( 8px );
+	width: em( 104px );
+	transform: translateY( em( 16px ) );
+	transition: all .15s ease-in-out;
+	outline: 0;
+
+	@media ( min-width: 800px ) {
+		display: block;
+	}
+	&:before {
+		@include arrow--down( 8px, $blue-dark );
+		margin-left: -8px;
+		left: 50%;
+	}
+	&:after {
+		content: "";
+		position: absolute;
+			top: 100%;
+			left: 0;
+		width: 100%;
+		height: em( 16px );
+	}
+	.nav-secondary:hover + &,
+	&:hover,
+	&:focus {
+		opacity: 1;
+		transform: translateY( 0 );
+	}
+	img {
+		display: block;
+		max-width: 100%;
+		height: auto;
+	}
+}

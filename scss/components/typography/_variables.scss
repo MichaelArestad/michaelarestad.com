@@ -1,0 +1,19 @@
+// ==========================================================================
+// Typography variables
+// ==========================================================================
+
+// Change these values when using custom fonts
+// For example, normal: 400;
+$normal: 400;
+$bold: 700;
+
+$root-font:(
+	color: $text,
+	font-size: 20px,
+	line-height: 1.5
+);
+
+// Typefaces
+$monospace: "courier new", monospace;
+$serif: Georgia, "Times New Roman", Times, serif;
+$sans: 'Lato', Helvetica, Arial, sans-serif;

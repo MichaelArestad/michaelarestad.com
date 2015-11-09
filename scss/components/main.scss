@@ -1,0 +1,36 @@
+// ==========================================================================
+// Main
+// ==========================================================================
+
+body {
+	color: $text;
+	background: #fff;
+}
+
+a {
+	text-decoration: none;
+	outline: 0;
+}
+
+// TODO refactor
+.default {
+	.to-top.do-it,
+	.to-top.do-it + .logo {
+		display: block;
+		position: fixed;
+		top: auto;
+		left: auto;
+		bottom: rem( 16px );
+		right: rem( 16px );
+		animation: appear .5s ease-in-out;
+
+		@media ( min-width: 450px ) {
+			position: absolute;
+			top: rem( 16px );
+			left: rem( 16px );
+			bottom: auto;
+			right: auto;
+			animation: none;
+		}
+	}
+}

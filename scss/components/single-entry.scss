@@ -1,0 +1,48 @@
+// ==========================================================================
+// Single post or page layout
+// ==========================================================================
+
+.single-entry {
+	background: #fff;
+
+	@media ( max-width: 799px ) {
+		font-size: em( 16px );
+	}
+	@media ( max-width: 459px ) {
+		font-size: em( 14px );
+	}
+
+	.logo {
+		margin: rem( 16px );
+	}
+
+	.to-top.do-it,
+	.to-top.do-it + .logo {
+		display: block;
+		position: fixed;
+		top: auto;
+		left: auto;
+		bottom: rem( 16px );
+		right: rem( 16px );
+		margin: 0;
+		animation: appear .5s ease-in-out;
+	}
+}
+
+@keyframes appear {
+	0% {
+		opacity: 0;
+	}
+}
+
+.entry {
+	margin: 0 auto;
+	padding: rem( 24px );
+
+	@media ( min-width: 459px ) {
+		max-width: rem( 600px );
+	}
+	@media ( min-width: 799px ) {
+		max-width: rem( 700px );
+	}
+}

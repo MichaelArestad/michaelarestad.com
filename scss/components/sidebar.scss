@@ -1,0 +1,31 @@
+// ==========================================================================
+// Sidebar
+// ==========================================================================
+
+$sidebar-width: em( 160px );
+$sidebar-small-width: em( 68px );
+
+.sidebar {
+	@include clearfix;
+
+	@media ( max-width: 449px ) {
+		margin-bottom: em( 16px );
+		min-height: em( 68px );
+	}
+	@media ( min-width: 450px ) {
+		position: fixed;
+			top: 0;
+			left: 0;
+		width: em( 68px );
+		height: 100vh;
+	}
+	@media ( min-width: 800px ) {
+		width: $sidebar-width;
+	}
+
+	.logo {
+		position: absolute;
+		top: rem( 16px );
+		left: rem( 16px );
+	}
+}

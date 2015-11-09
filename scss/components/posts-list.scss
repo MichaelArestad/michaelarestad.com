@@ -1,0 +1,33 @@
+// ==========================================================================
+// Posts List
+// ==========================================================================
+
+
+@keyframes posts-list-appear {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.posts-list {
+	display: none;
+	margin: 0 em( 8px );
+	padding: 0;
+	list-style: none;
+
+	@media ( max-width: 449px ) {
+		background: #fff;
+	}
+	@media ( min-width: 450px ) {
+		margin: em( 72px ) em( 88px ) em( 112px );
+		margin-top: em( 72px );
+	}
+}
+
+.posts-list--current {
+	display: block;
+	animation: posts-list-appear .15s ease-in-out;
+}
