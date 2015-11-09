@@ -4,23 +4,9 @@
 
 
 .list-item {
-	display: inline-block;
 	position: relative;
-	padding: 24px;
-	// margin-bottom: em( 42px );
-	background: $grey-light;
-	color: #fff;
+	margin-bottom: em( 42px );
 
-	&:before {
-		content: '';
-		position: absolute;
-			top: 0;
-			right: 100%;
-		z-index: -1;
-		width: $sidebar-width + em( 88px );
-		height: 100%;
-		background: $grey-light;
-	}
 	@media ( max-width: 449px ) {
 		margin: 0;
 		padding: em( 10px ) em( 16px ) em( 17px );
@@ -35,7 +21,6 @@
 .list-item__link {
 	display: block;
 	color: #4F5561;
-	color: #fff;
 	font-size: em( 16px );
 	@include text-overflow;
 
@@ -64,6 +49,5 @@
 	display: inline-block;
 	margin-right: em( 8px, 10px );
 	color: #8995A9;
-	color: #fff;
 	text-transform: uppercase;
 }
