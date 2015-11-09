@@ -79,6 +79,6 @@ grunt.initConfig({
 	}
 });
 
-grunt.registerTask( "default", [ "watch" ] );
+grunt.registerTask( "default", [ "sass", "autoprefixer", "concat", "uglify", "watch" ] );
 
 };
