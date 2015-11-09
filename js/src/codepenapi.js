@@ -1,6 +1,16 @@
 $( 'document' ).ready( function(){
-var codepenURL = 'http://cpv2api.com/pens/public/MichaelArestad',
+var codepenURL = 'http://cpv2api.com/pens/popular/MichaelArestad',
   pensList = [];
+
+var createPenThumbnail = function( url, sectionName, id) {
+  var pen = document.getElementById( 'listItem_' + sectionName + id ).children[ 0 ];
+
+  var thumbnail = document.createElement( 'img' );
+  thumbnail.setAttribute( 'src', url + '/image/large.png' );
+  thumbnail.setAttribute( 'class', 'codepen__thumbnail' );
+  // thumbnail.className( 'codepen-thumbnail' );
+  pen.appendChild( thumbnail );
+};
 
 var codepenapi_getList = function( url, sectionName ) {
   var pens = new XMLHttpRequest();
@@ -20,7 +30,8 @@ var codepenapi_getList = function( url, sectionName ) {
           pen.link = pens.data[ i ].link;
 
           pensList.push( pen );
-          Listatron.createListItem( pen, sectionName, pen.id );
+          Listatron.createListItem( pen, sectionName, 'codepen' );
+          createPenThumbnail( pen.link, sectionName, pen.id );
         }
       } else {
         console.error( pens.statusText );

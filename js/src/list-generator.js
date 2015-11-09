@@ -2,11 +2,12 @@ var Listatron = {};
 
 $( 'document' ).ready( function(){
 
-Listatron.createListItem = function( item, sectionName ) {
+Listatron.createListItem = function( item, sectionName, customClass ) {
   var container = document.getElementById( sectionName + 'List' );
 
   var blogPostContainer = document.createElement( 'li' );
-  blogPostContainer.setAttribute( 'class', 'list-item__container' );
+  var result = customClass !== undefined ? customClass : '';
+  blogPostContainer.setAttribute( 'class', 'list-item__container ' + customClass  );
   container.appendChild( blogPostContainer );
 
   var blogPost = document.createElement( 'div' );
@@ -114,6 +115,5 @@ var code = [
 ];
 
 getList( projects, 'projects' );
-getList( code, 'code' );
 
 });

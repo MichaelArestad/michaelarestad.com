@@ -18,8 +18,9 @@ a {
 	.to-top.do-it + .logo {
 		display: block;
 		position: fixed;
-		top: auto;
-		left: auto;
+			top: auto;
+			left: auto;
+		z-index: 1;
 		bottom: rem( 16px );
 		right: rem( 16px );
 		animation: appear .5s ease-in-out;

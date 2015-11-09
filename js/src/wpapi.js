@@ -43,7 +43,7 @@ var wpapi_getList = function( url, sectionName ) {
           post.id = blogPosts[ i ].id;
           post.link = blogPosts[ i ].link;
 
-          Listatron.createListItem( post, sectionName, post.id );
+          Listatron.createListItem( post, sectionName );
           wpapi_getCategories( post, sectionName );
         }
       } else {

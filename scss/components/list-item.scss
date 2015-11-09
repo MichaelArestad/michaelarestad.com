@@ -3,6 +3,12 @@
 // ==========================================================================
 
 
+.list-item__container {
+	@media ( max-width: 449px ) {
+		border-top: 1px solid $mobile-background;
+	}
+}
+
 .list-item {
 	position: relative;
 	margin-bottom: em( 42px );
@@ -10,7 +16,6 @@
 	@media ( max-width: 449px ) {
 		margin: 0;
 		padding: em( 10px ) em( 16px ) em( 17px );
-		border-top: 1px solid $mobile-background;
 
 		&:first-child {
 			border: 0;

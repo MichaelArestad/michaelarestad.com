@@ -1,0 +1,41 @@
+// ==========================================================================
+// CodePen link styles
+// ==========================================================================
+
+.codepen {
+	@media ( max-width: 449px ) {
+		border: 0;
+		margin-bottom: em( 16px );
+	}
+	.list-item {
+		@media ( max-width: 449px ) {
+			padding: 0;
+		}
+	}
+	.list-item__name {
+		display: block;
+		position: absolute;
+			bottom: 0;
+			left: 0;
+		width: 100%;
+		padding: em( 16px ) em( 24px );
+		background: $blue-dark;
+		color: #fff;
+		font-size: rem( 14px );
+		@include text-overflow;
+
+		@media ( min-width: 450px ) {
+			font-size: rem( 16px );
+		}
+		@media ( min-width: 800px ) {
+			font-size: rem( 20px );
+		}
+	}
+}
+
+.codepen__thumbnail {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	border: 1px solid $grey;
+}

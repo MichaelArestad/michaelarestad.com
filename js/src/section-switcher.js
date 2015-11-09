@@ -19,8 +19,7 @@ var switchSection = function( section ) {
 
 var articles = document.getElementById( 'articlesLink' ),
   projects = document.getElementById( 'projectsLink' ),
-  codepen = document.getElementById( 'codepenLink' ),
-  code = document.getElementById( 'codeLink' );
+  codepen = document.getElementById( 'codepenLink' );
 
 articles.onclick = function( e ){
   switchSection( 'articles' );
@@ -29,11 +28,6 @@ articles.onclick = function( e ){
 };
 projects.onclick = function( e ){
   switchSection( 'projects' );
-  e.preventDefault();
-  return false;
-};
-code.onclick = function( e ){
-  switchSection( 'code' );
   e.preventDefault();
   return false;
 };
