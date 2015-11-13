@@ -52,7 +52,6 @@ grunt.initConfig({
 		},
 		dist: {
 			src: [
-				'js/src/open.js',
 				'js/src/list-generator.js',
 				'js/src/wpapi.js',
 				'js/src/codepenapi.js',

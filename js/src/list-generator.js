@@ -1,7 +1,5 @@
 var Listatron = {};
 
-$( 'document' ).ready( function(){
-
 Listatron.createListItem = function( item, sectionName, customClass ) {
   var container = document.getElementById( sectionName + 'List' );
 
@@ -65,6 +63,32 @@ var getList = function( items, sectionName ){
 
 var projects = [
   {
+    title: 'WordPress.com',
+    link: 'wordpressdotcom/',
+    categories: [ 'Design', 'WordPress', 'Automattic' ]
+  },
+  {
+    title: 'Press This',
+    link: 'pressthis/',
+    categories: [ 'Design', 'WordPress' ]
+  },
+
+  {
+    title: 'Sensei Logo',
+    link: 'sensei/',
+    categories: [ 'Design', 'WordPress' ]
+  },
+  {
+    title: 'Jetpack',
+    link: 'jetpack/',
+    categories: [ 'Design', 'WordPress' ]
+  },
+  {
+    title: 'WordPress.org contributions',
+    link: 'sensei/',
+    categories: [ 'Design', 'WordPress' ]
+  },
+  {
     title: 'Backup browser',
     link: 'http://blog.vaultpress.com/2014/03/10/backup-browser/',
     categories: [ 'Design', 'VaultPress', 'WordPress', 'Automattic' ]
@@ -101,19 +125,6 @@ var projects = [
   }
 ];
 
-var code = [
-  {
-    title: 'Replace text with an icon font icon',
-    link: 'http://codepen.io/MichaelArestad/pen/wBfeE',
-    categories: [ 'CodePen', 'CSS' ]
-  },
-  {
-    title: 'Text input love',
-    link: 'http://codepen.io/MichaelArestad/full/ohLIa',
-    categories: [ 'CodePen', 'Design', 'Inputs', 'CSS' ]
-  }
-];
 
 getList( projects, 'projects' );
 
-});

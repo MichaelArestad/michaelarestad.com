@@ -1,14 +1,12 @@
-$( 'document' ).ready( function(){
-var codepenURL = 'http://cpv2api.com/pens/popular/MichaelArestad',
+var codepenURL = 'http://cpv2api.com/pens/showcase/MichaelArestad',
   pensList = [];
 
-var createPenThumbnail = function( url, sectionName, id) {
+var createPenThumbnail = function( imageURL, sectionName, id) {
   var pen = document.getElementById( 'listItem_' + sectionName + id ).children[ 0 ];
 
   var thumbnail = document.createElement( 'img' );
-  thumbnail.setAttribute( 'src', url + '/image/large.png' );
+  thumbnail.setAttribute( 'src', imageURL );
   thumbnail.setAttribute( 'class', 'codepen__thumbnail' );
-  // thumbnail.className( 'codepen-thumbnail' );
   pen.appendChild( thumbnail );
 };
 
@@ -28,10 +26,12 @@ var codepenapi_getList = function( url, sectionName ) {
           pen.title = pens.data[ i ].title;
           pen.id = pens.data[ i ].id;
           pen.link = pens.data[ i ].link;
+          pen.image = pens.data[ i ].images.large;
 
           pensList.push( pen );
           Listatron.createListItem( pen, sectionName, 'codepen' );
-          createPenThumbnail( pen.link, sectionName, pen.id );
+
+          createPenThumbnail( pen.image, sectionName, pen.id );
         }
       } else {
         console.error( pens.statusText );
@@ -44,6 +44,4 @@ var codepenapi_getList = function( url, sectionName ) {
   pens.send();
 };
 
-codepenapi_getList( codepenURL, 'codepen' );
-codepenapi_getList( codepenURL + '?page=2', 'codepen' );
-});
+codepenapi_getList( codepenURL, 'codepen', true );
